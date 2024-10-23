@@ -1,41 +1,118 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col p-2">
-      <h1 className="text-3xl font-bold">
-        Ref Finance Agent
-      </h1>
-      <ul>
-        <li>
-          <a
-            href="https://docs.mintbase.xyz/ai/mintbase-plugins"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Docs
-          </a>
-        </li>
-        <li>
-          <Link href="/.well-known/ai-plugin.json">
-            OpenAPI Spec
-          </Link>
-        </li>
-        <li>
-          <Link href="/api/swagger">
-            Swagger
-          </Link>
-        </li>
-        <li>
-          <a
-            href="https://github.com/Mintbase/ref-finance-agent-next"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Source Code
-          </a>
-        </li>
-      </ul>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-4">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden border-4 border-black">
+        <div className="p-8">
+          <div className="flex items-center justify-center">
+            <Image
+              src="https://wallet.bitte.ai/bitte-symbol-black.svg"
+              alt="Bitte"
+              className="w-8 h-8 inline-block mr-2"
+              width={32}
+              height={32}
+            />
+            <div style={{ display: "inline-block", verticalAlign: "middle" }}>
+              <svg
+                width="153px"
+                height="29px"
+                viewBox="0 0 270 51"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className=""
+              >
+                <path
+                  d="M25.8242 23.3608L36.2542 13.0008C36.6488 12.6084 36.9601 12.1405 37.1697 11.6251C37.3794 11.1096 37.4829 10.5572 37.4742 10.0008V1.60083C37.4633 1.17887 37.2957 0.776082 37.0042 0.470825L17.0042 20.4708C16.6172 20.8564 16.3101 21.3146 16.1006 21.8191C15.8911 22.3236 15.7832 22.8645 15.7832 23.4108C15.7832 23.9571 15.8911 24.498 16.1006 25.0026C16.3101 25.5071 16.6172 25.9653 17.0042 26.3508L31.1242 40.3708C31.5103 40.7569 31.9687 41.0632 32.4731 41.2721C32.9776 41.4811 33.5182 41.5886 34.0642 41.5886C34.6102 41.5886 35.1509 41.4811 35.6553 41.2721C36.1598 41.0632 36.6181 40.7569 37.0042 40.3708C37.3903 39.9847 37.6966 39.5264 37.9055 39.0219C38.1145 38.5175 38.222 37.9768 38.222 37.4308C38.222 36.8848 38.1145 36.3442 37.9055 35.8397C37.6966 35.3353 37.3903 34.8769 37.0042 34.4908L25.8242 23.3608Z"
+                  fill="#0100C8"
+                ></path>
+                <path
+                  d="M35.8542 0.000814793H4.43419C3.83989 -0.0106889 3.24955 0.0997266 2.69959 0.325246C2.14963 0.550766 1.65172 0.886605 1.2366 1.31203C0.821478 1.73746 0.49795 2.24346 0.285985 2.79878C0.0740191 3.35411 -0.0218865 3.94698 0.00418733 4.54081V37.3408C-0.0025204 37.8982 0.102311 38.4512 0.312513 38.9675C0.522715 39.4837 0.834043 39.9527 1.22818 40.3468C1.62231 40.741 2.0913 41.0523 2.60753 41.2625C3.12377 41.4727 3.67684 41.5775 4.23419 41.5708C4.79191 41.5789 5.34559 41.475 5.86245 41.2653C6.37931 41.0556 6.84885 40.7443 7.24326 40.3499C7.63767 39.9555 7.94895 39.4859 8.15867 38.9691C8.36838 38.4522 8.47227 37.8985 8.46419 37.3408V8.09081H29.3742L37.0042 0.470815C36.6973 0.1694 36.2843 0.000609512 35.8542 0.000814793Z"
+                  fill="#2B6FF4"
+                ></path>
+                <path
+                  d="M65.2244 25.9108V39.9108H58.7344V2.60083H75.6544C84.4944 2.60083 89.0044 6.79083 89.0044 13.2908C89.0044 18.6508 85.1244 22.5908 79.2944 23.6608C80.7354 23.8068 82.1275 24.264 83.3744 25.0008C85.5244 26.3808 86.6444 28.8908 87.8744 33.1808L89.8144 39.8708H82.9144L81.1744 33.2808C79.5944 27.2008 78.1044 25.8708 71.6144 25.8708L65.2244 25.9108ZM65.2244 8.23083V21.2308H73.8144C79.4344 21.2308 82.5544 18.6708 82.5544 14.5308C82.5544 10.5308 80.0544 8.25083 74.0744 8.25083L65.2244 8.23083Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M106.684 40.4309C96.8139 40.4309 91.7539 34.1409 91.7539 25.7609C91.7539 17.6309 97.3239 10.7609 106.474 10.7609C115.824 10.7609 120.224 17.4609 120.224 25.1209V27.3709H98.0039C98.5139 32.2309 101.424 35.1409 106.584 35.1409C110.314 35.1409 112.464 33.6109 114.154 30.6409L119.514 33.5609C117.054 37.5609 113.064 40.4309 106.684 40.4309ZM98.0939 23.3509H113.934C113.684 19.1109 111.434 15.9909 106.424 15.9909C101.674 16.0009 98.8039 18.7509 98.0939 23.3509Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M136.884 10.9308C141.534 10.9308 144.654 12.9808 146.444 17.0708V11.2908H152.784V51.0008H146.344V34.0008C145.506 35.9346 144.102 37.5695 142.318 38.6904C140.533 39.8113 138.45 40.3658 136.344 40.2808C129.544 40.2808 124.024 35.4308 124.024 25.7708C124.054 15.8908 130.344 10.9308 136.884 10.9308ZM146.884 25.5508C146.884 20.0808 144.374 16.1008 138.704 16.1008C133.394 16.1008 130.574 19.9308 130.574 25.6508C130.574 31.3708 133.254 35.0008 138.724 35.0008C144.394 35.0008 146.904 31.0008 146.904 25.5508H146.884Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M185.394 39.9108H179.004V33.1708C177.054 38.0208 173.534 40.4808 169.184 40.4808C162.284 40.4808 158.964 35.8808 158.964 28.8708V11.2908H165.354V27.1408C165.354 31.9908 167.044 35.1408 171.844 35.1408C176.244 35.1408 178.954 31.3608 178.954 25.3808V11.2908H185.394V39.9108Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M205.325 40.4309C195.455 40.4309 190.395 34.1409 190.395 25.7609C190.395 17.6309 195.965 10.7609 205.115 10.7609C214.475 10.7609 218.865 17.4609 218.865 25.1209V27.3709H196.635C197.145 32.2309 200.055 35.1409 205.225 35.1409C208.955 35.1409 211.095 33.6109 212.785 30.6409L218.155 33.5609C215.695 37.5609 211.715 40.4309 205.325 40.4309ZM196.735 23.3509H212.585C212.325 19.1109 210.075 15.9909 205.065 15.9909C200.315 16.0009 197.455 18.7509 196.735 23.3509Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M226.324 30.4608C227.375 31.9678 228.787 33.1875 230.431 34.0085C232.074 34.8295 233.898 35.2257 235.734 35.1608C239.664 35.1608 241.304 33.2708 241.304 31.2808C241.304 28.3608 236.804 28.1608 231.694 27.2808C226.584 26.4008 222.754 24.7808 222.754 19.6108C222.754 14.6108 226.944 10.6108 234.144 10.6108C239.974 10.6108 244.064 12.3508 247.534 16.4308L242.634 20.6308C241.695 19.1526 240.384 17.9469 238.833 17.1344C237.281 16.3218 235.544 15.9309 233.794 16.0008C229.854 16.0008 228.374 17.7908 228.374 19.6808C228.374 22.2408 231.744 22.6808 236.494 23.4208C241.914 24.2308 246.974 25.5108 246.974 31.2908C246.974 36.6508 242.684 40.5408 235.574 40.5408C229.084 40.5408 224.484 38.3908 221.674 34.8608L226.324 30.4608Z"
+                  fill="#050B20"
+                ></path>
+                <path
+                  d="M270.004 39.2508C268.359 40.0776 266.535 40.4831 264.694 40.4308C258.454 40.4308 255.904 37.1008 255.904 30.7708V16.6108H249.354V11.2908H256.004V4.00079L262.004 0.430786V11.2908H270.004V16.6108H262.004V30.0008C262.004 33.5808 263.484 34.9108 266.294 34.9108C267.599 34.9185 268.89 34.6385 270.074 34.0908L270.004 39.2508Z"
+                  fill="#050B20"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <ul className="space-y-6">
+            <li>
+              <a
+                href="https://docs.bitte.ai/agents/quick-start"
+                target="_blank"
+                rel="noreferrer"
+                className="block text-center py-3 px-6 bg-red-400 text-white rounded-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
+              >
+                Docs
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wallet.bitte.ai/"
+                target="_blank"
+                rel="noreferrer"
+                className="block text-center py-3 px-6 bg-blue-400 text-white rounded-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
+              >
+                Wallet
+              </a>
+            </li>
+            <li>
+              <Link
+                href="/.well-known/ai-plugin.json"
+                className="block text-center py-3 px-6 bg-green-400 text-white rounded-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
+              >
+                OpenAPI Spec
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/api/swagger"
+                className="block text-center py-3 px-6 bg-yellow-400 text-white rounded-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
+              >
+                Swagger
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Tguntenaar/request-finance-agent-next"
+                target="_blank"
+                rel="noreferrer"
+                className="block text-center py-3 px-6 bg-purple-400 text-white rounded-lg font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
+              >
+                Source Code
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
   );
 }
